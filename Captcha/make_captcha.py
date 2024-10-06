@@ -72,7 +72,7 @@ def make_captcha_other():
 numbers = []
 for j in ['Bold', 'italics']:
     for i in range(10):
-        numbers.append(Image.open(f'C:/Users/Sam/Desktop/high_def_pictures/{j}/{i}.png'))
+        numbers.append(Image.open(f'.../{j}/{i}.png'))
 
 captcha = make_captcha_other()
 captcha[0].show()

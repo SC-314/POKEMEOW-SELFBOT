@@ -8,18 +8,16 @@ from io import BytesIO
 from PIL import Image
 from ultralytics import YOLO
 
-# BRUH
 
 import winsound
 
-model = YOLO(r'C:\Users\Sam\Desktop\YOLO\runs\detect\train26\weights\best.pt')
+model = YOLO(r'...')
 
-token = 'MTExNTU3NDMzODEwODgwMTEzOA.GHqgK1.rhj2_Ds17E1a_jRsJgGtRPi7QxS1QyCra6z6Z4'
+token = '...'
 bot = discum.Client(token=token)
 
-guildID = "1268719042655551488"  # Replace with your guild ID if applicable
-channelID = CHANNEL_ID = "1292068276859437157"  # Replace with your channel ID
-messageID = "1291792392567001098"  # Replace with the message ID#
+guildID = "..."  # Replace with your guild ID if applicable
+channelID = CHANNEL_ID = "..."  # Replace with your channel ID
 
 def make_sound():
     winsound.Beep(1000, 100)
@@ -35,41 +33,6 @@ def check_message_edited(message_id):
 
     # If message was edited, return True
     return bool(edited_timestamp)
-
-
-def monitor_message_for_edits(message_id, message, image):
-    """Monitor a message for edits for 10 seconds."""
-    print(f"Monitoring message {message_id} for edits...")
-    time.sleep(random.uniform(2,5))
-    start_time = time.time()
-    solution = captcha_solver(image)
-    bot.sendMessage(message['channel_id'], solution)
-
-    edited = False
-
-    # Check for edits during the next 10 seconds
-    while time.time() - start_time < 15:
-        if check_message_edited(message_id):
-            print(f"Message {message_id} was edited.")
-            edited = True
-            a = bot.getMessage(CHANNEL_ID, message_id).json()[0]
-            if 'Thank you, you may continue' in a['content']:
-                time.sleep(random.uniform(2,4))
-                # bot.sendMessage(message['channel_id'], ';p')
-            else:
-
-                print(f"Message {message_id} was NOT edited within 10 seconds. Stopping bot.")
-                print("error"*1000)
-                for _ in range(10):
-                    winsound.Beep(1000, 100)
-                    winsound.Beep(1000, 100)
-                    winsound.Beep(1000, 100)
-                    winsound.Beep(1000, 100)
-                    winsound.Beep(1000, 100)
-
-                bot.gateway.close()
-
-        time.sleep(random.uniform(1,3)/2)
 
 
 
@@ -181,6 +144,8 @@ def main(resp):
 
     if resp.event.message:
         message = resp.parsed.auto()
+        if message['channel_id'] != channelID:
+            return None
         messageID = message['id']
         if (message['type'] == 'default'):
             print(message['content'])
@@ -201,13 +166,7 @@ def main(resp):
             else:
                 time.sleep(random.uniform(8,10)+1)
             bot.sendMessage(message['channel_id'], ';p')
-        # elif counter > 0:
-        #     if 'Thank you, you may continue playing!' in message['content']:
-        #         print("captcha solved")
-        #         counter = 0
-        #
-        #     else:
-        #         return None
+
 
 
         else:
@@ -243,24 +202,6 @@ def main(resp):
                     count += 1
 
 
-                    # time.sleep(1.5)
-                    # bot.sendMessage(message['channel_id'], '1')
-
-
-
-
-
-
-
-
-
-                # winsound.Beep(1000, 100)
-                # print("===========Found captcha=========")
-                # embeds = message['embeds']
-                # url = embeds[0]['image']['url']
-                # response = requests.get(url)
-                # image = Image.open(BytesIO(response.content))
-                # monitor_message_for_edits(message['id'], message, image)
 
 bot.gateway.run()
 

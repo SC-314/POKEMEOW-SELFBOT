@@ -43,7 +43,7 @@ def captcha_solver(image):
         captcha_solution += str(i)
     return captcha_solution
 
-model = YOLO(r'C:\Users\Sam\Desktop\YOLO\runs\detect\train26\weights\best.pt')
+model = YOLO(r'...')
 
-image = Image.open(r'C:\Users\Sam\Desktop\YOLO\captcha_dataset\images\discord\7.png')
+image = Image.open(r'...')
 print(captcha_solver(image))
