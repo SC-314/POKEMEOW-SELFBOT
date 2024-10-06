@@ -1,0 +1,13 @@
+0	img = Image.open(r'C:/Users/Sam/Desktop/high_def_pictures/italics/1/1610798141148.png').crop((67,155,75,172))
+2	img = Image.open(r'C:/Users/Sam/Desktop/high_def_pictures/italics/2/1833276830016.png').crop((39,58,53,76))
+5	img = Image.open(r'C:/Users/Sam/Desktop/high_def_pictures/italics/5/1318262367288.png').crop((54,82,70,99))
+9	img = Image.open(r'C:/Users/Sam/Desktop/high_def_pictures/italics/8/981520431717.png').crop((1,73,17,90))
+9	img = Image.open(r'C:/Users/Sam/Desktop/high_def_pictures/italics/9/1830495284219.png').crop((46,25,59,42))
+
+
+
+
+
+
+
+3 italics: is when i start using no border

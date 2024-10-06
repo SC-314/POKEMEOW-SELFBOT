@@ -1,0 +1,10 @@
+3	img = Image.open(r'C:/Users/Sam/Desktop/high_def_pictures/Bold/3/1318262367288.png').crop((38,78,50,100))	done
+5	img = Image.open(r'C:/Users/Sam/Desktop/high_def_pictures/Bold/5/910651749015.png').crop((87,3,100,24))		done
+7	img = Image.open(r'C:/Users/Sam/Desktop/high_def_pictures/Bold/7/910651749015.png').crop((12,80,22,101)) (rank = 2)	done
+2	img = Image.open(r'C:/Users/Sam/Desktop/high_def_pictures/Bold/2/910651749015.png').crop((144,17,155,38)) (rank = 2)	done
+6	img = Image.open(r'C:/Users/Sam/Desktop/high_def_pictures/Bold/6/1454474851779.png').crop((83, 117, 95, 140))	done
+9	img = Image.open(r'C:/Users/Sam/Desktop/high_def_pictures/Bold/9/1675389844124.png').crop((7,15,19,36))		done
+8	img = Image.open(r'C:/Users/Sam/Desktop/high_def_pictures/Bold/8/1150194067323.png').crop((22,3,34,24))		done
+1	img = Image.open(r'C:/Users/Sam/Desktop/high_def_pictures/Bold/1/1610798141148.png').crop((37,113,46,135)) (rank = 2)	done
+4	img = Image.open(r'C:/Users/Sam/Desktop/high_def_pictures/Bold/4/1098963555221.png').crop((52,145,65,166))	done
+0	img = Image.open(r'C:/Users/Sam/Desktop/high_def_pictures/Bold/0/975708872453.png').crop((50,18,62,39)) (rank =2)	done
