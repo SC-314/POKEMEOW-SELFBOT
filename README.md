@@ -11,7 +11,6 @@ To set up the project, follow these steps:
 
 ```bash
 git clone https://github.com/SC-314/POKEMEOW-SELFBOT.git
-pip install -r requirements.txt
 
 
 ## License
